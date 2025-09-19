@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jovan Portfolio</title>
 
-<!-- Main CSS File-->
+    <!-- Main CSS File-->
     <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="framesize.css" />
+    <link rel="stylesheet" href="framesize.css" />
+    <link rel="stylesheet" href="exp.css" />
+    <link rel="stylesheet" href="navbar.css" />
+
+    <!-- External source File-->
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head class="header">
@@ -72,20 +77,30 @@
                 </rect>
             </svg>
         </div>
-
-        <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            <nav class="navbar">
+        <header id="header" class="testing">
+            <nav class="links" style="--items: 6;">
+                <a href="#container">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#services">Past-Projects</a>
+                <a href="#Skillset">Skillset</a>
+                <a href="#contact">Contact</a>
+                <span class="line"></span>
+            </nav>
+        </header>
+        <!-- <header class="header" id="test">
+            <nav class="navbar" id="navbar" style="--items: 6;">
                 <a href="#container">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Past-Projects</a>
+                <a href="#experience">Experience</a>
                 <a href="#Skillset">Skillset</a>
-                <a href="#">Resume</a>
                 <a href="#contact">Contact</a>
+                <span class="line"></span>
             </nav>
-        </header>
-        <section class="home">
-            <div class="home-content">
+        </header> -->
+        <section class="home test">
+            <div class="home-content test">
                 <h3>Hello there, I am</h3>
                 <h1>Jovan</h1>
                 <h3>and I am a ...<span class="text"></span></h3>
@@ -96,168 +111,259 @@
                 </p>
                 <section class="home-science">
                     <a href="https://www.linkedin.com/in/jovan-ong-427450304" target="_blank" style="--i:1"
-                        rel="noopener noreferrer" title="go to Jovan's linkedin"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/papa.ong/" target="_blank" style="--i:2"
+                        class="linkedin" rel="noopener noreferrer" title="go to Jovan's linkedin"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/papa.ong/" target="_blank" style="--i:2" class="instagram"
                         rel="noopener noreferrer" title="go to Jovan's Instagram!"><i class='bx bxl-instagram'></i></a>
                     <a href="https://github.com/account" target="_blank" style="--i:3" rel="noopener noreferrer"
-                        title="go to Jovan's Github!"><i class='bx bxl-github'></i></a>
+                        class="github" title="go to Jovan's Github!"><i class='bx bxl-github'></i></a>
                 </section>
-                <a href="#about" class="btn-box">More About Me</a>
+                <button href="JovanCV.pdf" class="btn-box liquid">More About Me</button>
             </div>
         </section>
-    </div>
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="F1040032.JPG" />
-        </div>
-        <div class="about-text">
-            <h2>About<span>Me</span></h2>
-            <h4>Web Developer</h4>
-            <p>I have some basic experience in web development.
-                I’ve worked with HTML, CSS, and a bit of JavaScript to create simple web pages and
-                understand how websites are structured. While I’m still learning, I enjoy experimenting
-                with layouts and interactive elements, and I’m looking forward to improving my skills
-                and taking on more complex projects in the future.</p>
-            <a href="#" class="btn-box">My Resume</a>
-        </div>
-    </section>
-    <section>
-        <div class="services" id="services">
-            <h1 class="sub-title">My past <span>Projects</span></h1>
-            <div class="project-list">
-                <div>
-                    <i class='bx bx-checkbox-checked' style="color:cornflowerblue"></i>
-                    <h2>Palindrome Checker</h2>
-                    <p>This project leverages HTML to structure a clear input field and result display area,
-                        making it intuitive for users. CSS is applied to style the input, button, and output elements,
-                        ensuring the interface is clean and responsive.
-                        JavaScript underpins the core functionality by reversing input strings and
-                        comparing them to detect palindromes. </p>
-                    <a href=" https://watsurprob.github.io/Palindrome.github.io/" class="read">Try it!</a>
+
+        <section class="about test">
+            <div class="about-img test">
+                <img src="F1040032.JPG" />
+            </div>
+            <div class="about-text" id="about">
+                <h2 class="test">About<span class="test"> Me</span></h2>
+                <h4 class="test">Web Developer</h4>
+                <p class="test">I have some basic experience in web development.
+                    I’ve worked with HTML, CSS, and a bit of JavaScript to create simple web pages and
+                    understand how websites are structured. While I’m still learning, I enjoy experimenting
+                    with layouts and interactive elements, and I’m looking forward to improving my skills
+                    and taking on more complex projects in the future.</p>
+                <button href="JovanCV.pdf" class="btn-box liquid "><span class="button">My Resume</span></button>
+            </div>
+        </section>
+        <section class="experience test" id="experience">
+            <h1 class="expHeader test">My Experience </h1>
+            <div class="exp">
+                <h1 class="test">Education <i class='bx bx-book-open'></i></h1>
+                <div class="container test">
+                    <div class="card ">
+                        <div class="face face1 ">
+                            <div class="content ">
+                                <a>Computer Science and Statistics Double Major</a>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <h2>National University of Singapore</h2>
+                            <a>Currently matriculated</a>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="face face1 ">
+                            <div class="content ">
+                                <a>Track and Field Sprints</a>
+                                <a>Singapore Schools Sports Council Color</a>
+                                <a>A Level [Biology Chemistry Math Economics] 88.875</a>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <h2>Victoria Junior College</h2>
+                            <a class="year test">2021 - 2022</a>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="face face1 ">
+                            <div class="content ">
+                                <a>Victoria School Distinguished Award</a>
+                                <a>Victoria School Junior Leader</a>
+                                <a>Edusave Award for Achievement, Good Leadership and Service</a>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <h2>Victoria School</h2>
+                            <a class="year">2017 - 2020</a>
+                        </div>
+                    </div>
                 </div>
+                <h1 class="test">Recent Work <i class='bx bx-briefcase-alt-2'></i></h1>
+                <section class="Work test">
+                    <div class="NUS ">
+                        <div class="one">
+                            <div class="one-front">
+                                <h2>NUS School of Computing Summer Workshop</h2>
+                                <h3>Student Facilatator</h3>
+                                <a class="year">July 2025</a>
+                            </div>
+                            <div class="one-back">
+                                <p>As a Student Facilitator, I assisted in guiding and
+                                    supporting participants throughout the program.
+                                    My role involved helping students with accomodations,
+                                    providing clarifications during technical sessions,
+                                    and ensuring a smooth and engaging learning experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="TTAcad ">
+                        <div class="two">
+                            <div class="two-front">
+                                <h2>Tinkeracademy</h2>
+                                <h3>Part-Time Teacher</h3>
+                                <a>Feb 2025 - Current</a>
+                            </div>
+                            <div class="two-back">
+                                <p>At Tinkercademy under Tinkertanker, I support tech educators in guiding students
+                                    through hands-on digital design workshops,
+                                    with a primary focus on teaching Figma for UI/UX and prototyping.
+                                    I assist in lesson delivery, and help prepare students for Tinkercademy's
+                                    design-application
+                                    competition.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div>
-                    <i class='bx bx-cube-alt' style="color:cornflowerblue"></i>
-                    <h2>Roman Number Convertor</h2>
-                    <p>This tool uses HTML to build a user-friendly interface with distinct input and result sections.
-                        CSS provides consistent styling and layout,
-                        emphasizing readability and usability with a simple, modern design.
-                        JavaScript handles the conversion logic between integers and Roman numerals,
-                        efficiently mapping and processing values. </p>
-                    <a href="https://watsurprob.github.io/RomanNumeral.github.io/" class="read">Try it!</a>
+                    <h1 class="test">Extracurricular <i class='bx bx-globe'></i></h1>
                 </div>
 
-            </div>
-        </div>
-    </section>
-    <section class = "Skillset_Page">
-        <h1 class="sub-title">My <span>Skills</span>(Satire)</h1>
-        <div id="Skillset"></div>
-        <section class="Skillset">
-            <div class="container 1" id="Skills">
-                <h1 class="heading1">Technical Skills</h1>
-                <div class="technical-bars">
-                    <div class="bar"><i class='bx bxl-html5' style="color:brown"></i>
-                        <div class="info">
-                            <span>HTML</span>
-                        </div>
-                        <div class="progress-line html">
-                            <span></span>
-                        </div>
+
+        </section>
+        <section class="serviceTest">
+            <div class="services test" id="services">
+                <h1 class="sub-title test">My past <span class="test">Projects</span></h1>
+                <div class="project-list test">
+                    <div class="test">
+                        <i class='bx bx-checkbox-checked' style="color:cornflowerblue"></i>
+                        <h2>Palindrome Checker</h2>
+                        <p>This project leverages HTML to structure a clear input field and result display area,
+                            making it intuitive for users. CSS is applied to style the input, button, and output
+                            elements,
+                            ensuring the interface is clean and responsive.
+                            JavaScript underpins the core functionality by reversing input strings and
+                            comparing them to detect palindromes. </p>
+                        <a href=" https://watsurprob.github.io/Palindrome.github.io/" class="read">Try it!</a>
                     </div>
-                    <div class="bar"><i class='bx bxl-css3' style="color:mediumblue"></i>
-                        <div class="info">
-                            <span>CSS</span>
-                        </div>
-                        <div class="progress-line css">
-                            <span></span>
-                        </div>
+                    <div class="test">
+                        <i class='bx bx-cube-alt' style="color:cornflowerblue"></i>
+                        <h2>Roman Number Convertor</h2>
+                        <p>This tool uses HTML to build a user-friendly interface with distinct input and result
+                            sections.
+                            CSS provides consistent styling and layout,
+                            emphasizing readability and usability with a simple, modern design.
+                            JavaScript handles the conversion logic between integers and Roman numerals,
+                            efficiently mapping and processing values. </p>
+                        <a href="https://watsurprob.github.io/RomanNumeral.github.io/" class="read">Try it!</a>
                     </div>
-                    <div class="bar"><i class='bx bxl-javascript' style="color:goldenrod"></i>
-                        <div class="info">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="progress-line JavaScript">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bar"><i class='bx bxl-python' style="color:darkkhaki"></i>
-                        <div class="info">
-                            <span>Python</span>
-                        </div>
-                        <div class="progress-line Python">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container 1">
-                <h1 class="heading1">Professional Skills</h1>
-                <div class="radial-bars">
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewbox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">90%</div>
-                        <div class="text">Leadership</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewbox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">90%</div>
-                        <div class="text">Communication</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewbox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">90%</div>
-                        <div class="text">Problem-Solving</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewbox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">90%</div>
-                        <div class="text">Adapting</div>
-                    </div>
+
                 </div>
             </div>
         </section>
-    </section>
-    <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me</span></h2>
-            <h4>Let's work <span class="together">together!</span></h4>
-            <p>Though I am still developing as a computer scientist, I bring strong fundamentals,
-                eagerness to learn, and a drive to grow,
-                qualities I hope align with your vision in hiring future potential.
-            </p>
-            <div class="contact-list">
-                <li><i class='bx bx-send' style='color:#92a9e0'></i>jovanong04@yahoo.com.sg</li>
-                <li><i class='bx bxs-phone-call' style='color:#92a9e0'></i>+65 9298 2715</li>
+
+        <section class="Skillset_Page test" id="Skillset">
+            <h1 class="sub-title test">My <span class="test">Skills</span>(Satire)</h1>
+            <section class="Skillset test">
+                <div class="container 1 test" id="Skills">
+                    <h1 class="heading1 test">Technical Skills</h1>
+                    <div class="technical-bars test">
+                        <div class="bar test"><i class='bx bxl-html5 test' style="color:brown"></i>
+                            <div class="info test">
+                                <span>HTML</span>
+                            </div>
+                            <div class="progress-line html test">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar test"><i class='bx bxl-css3 test' style="color:mediumblue"></i>
+                            <div class="info test">
+                                <span class="test">CSS</span>
+                            </div>
+                            <div class="progress-line css test">
+                                <span class="test"></span>
+                            </div>
+                        </div>
+                        <div class="bar test"><i class='bx bxl-javascript test' style="color:goldenrod"></i>
+                            <div class="info test">
+                                <span class="test">JavaScript</span>
+                            </div>
+                            <div class="progress-line JavaScript test">
+                                <span class="test"></span>
+                            </div>
+                        </div>
+                        <div class="bar test"><i class='bx bxl-python test' style="color:darkkhaki"></i>
+                            <div class="info test">
+                                <span class="test">Python</span>
+                            </div>
+                            <div class="progress-line Python test">
+                                <span class="test"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container 1 test">
+                    <h1 class="heading1 test">Professional Skills</h1>
+                    <div class="radial-bars test">
+                        <div class="radial-bar test">
+                            <svg x="0px" y="0px" viewbox="0 0 200 200">
+                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                            </svg>
+                            <div class="percentage">90%</div>
+                            <div class="text">Leadership</div>
+                        </div>
+                        <div class="radial-bar">
+                            <svg x="0px" y="0px" viewbox="0 0 200 200">
+                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                            </svg>
+                            <div class="percentage">90%</div>
+                            <div class="text">Communication</div>
+                        </div>
+                        <div class="radial-bar">
+                            <svg x="0px" y="0px" viewbox="0 0 200 200">
+                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                            </svg>
+                            <div class="percentage">90%</div>
+                            <div class="text">Problem-Solving</div>
+                        </div>
+                        <div class="radial-bar">
+                            <svg x="0px" y="0px" viewbox="0 0 200 200">
+                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                                <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                            </svg>
+                            <div class="percentage">90%</div>
+                            <div class="text">Adapting</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="contact test" id="contact">
+            <div class="contact-text test">
+                <h2 class="test">Contact <span>Me</span></h2>
+                <h4 class="test">Let's work <span class="together test">together!</span></h4>
+                <p class="test">Though I am still developing as a computer scientist, I bring strong fundamentals,
+                    eagerness to learn, and a drive to grow,
+                    qualities I hope align with your vision in hiring future potential.
+                </p>
+                <div class="contact-list test">
+                    <li><i class='bx bx-send test' style='color:#92a9e0'></i>jovanong04@yahoo.com.sg</li>
+                    <li><i class='bx bxs-phone-call test' style='color:#92a9e0'></i>+65 9298 2715</li>
+                </div>
             </div>
+            <div class="contact-form test">
+                <form action="">
+                    <input type="" placeholder="Enter your name" required>
+                    <input type="email" placeholder="Enter your Email" required>
+                    <input type="" placeholder="Enter your Subject">
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter your message!"></textarea>
+                    <input type="submit" value="submit" class="send">
+                </form>
+            </div>
+        </section>
+        <div class="last-text test">
+            <p>Developed out of boredom by Jovan 2025 </p>
         </div>
-        <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter your name" required>
-                <input type="email" placeholder="Enter your Email" required>
-                <input type="" placeholder="Enter your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter your message!"></textarea>
-                <input type="submit" value="submit" class="send">
-            </form>
-        </div>
-    </section>
-    <div class="last-text">
-        <p>Developed out of boredom by Jovan 2025 </p>
+        <a href="#container" class="top test"><i class='bx bxs-chevron-up-circle bx-tada'
+                style='color:rgba(7,243,164,0.99)'></i></a>
+        <script src="./script.js"></script>
     </div>
-    <a href="#container" class="top"><i class='bx bxs-chevron-up-circle bx-tada'
-            style='color:rgba(7,243,164,0.99)'></i></a>
-    <script src="script.js"></script>
 </body>
 
 </html>
