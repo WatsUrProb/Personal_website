@@ -1,0 +1,217 @@
+*education segment*/
+  .experience .container{
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  
+  .card{
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    background: whitesmoke;
+    box-shadow: 0 15px 60px rgba(0,0,0, .5);
+    border-radius: 15px;
+  }
+  
+  .card .face{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+  }
+  
+  .card .face.face1{
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .card .face.face1 h2{
+    margin: 0;
+    padding:0;
+  }
+  
+  .card .face.face1 .content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the right */
+  text-align: left;     /* Makes text right-aligned */
+  color: #111;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0 0 1em 0;
+  font-weight: 500;
+  gap: 10px; /* Add spacing between achievements */
+  }
+  
+  .card .face.face2{
+    background: #111;
+    transition: 0.8s;
+  }
+  
+  .card:nth-child(1) .face.face2{
+    background: linear-gradient(45deg, orange, blue);
+    border-radius: 15px;
+  }
+  
+  .card:nth-child(2) .face.face2{
+    background: linear-gradient(45deg, #B3150C, #FFD97A);
+    border-radius: 15px;
+  }
+  
+  .card:nth-child(3) .face.face2{
+    background: linear-gradient(45deg, #e91e63, #ffeb3b);
+    border-radius: 15px;
+  }
+  
+  .card:hover .face.face2{
+    height: 10vh;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .card .face.face2:before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 15px 0 0 15px;
+  }
+  
+  .card .face.face2 h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4vh;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0,0,0, .2);
+  }
+  
+  .card:hover .face.face2 h2{
+    font-size: 2vh;
+  }
+
+.card .face.face1 .content a {
+  font-size: 1vw;
+  color: inherit;        /* Inherit text color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 400;
+}
+
+.card .face .year{
+  display: grid;
+}
+
+/*work exp segment*/
+.Work{
+    display: flex;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 10%;
+}
+
+
+/* .Work div{
+    border-radius: 10px;
+    padding: 2vw;
+    border-width: 1vw;
+    padding-left: 1vw;
+    text-align: left;
+    background-color: white;
+    margin: auto;
+    width: 20vw;
+    display: grid;
+}  */
+
+.Work div{
+    border-radius: 10px;
+    padding: 2vw;
+    border-width: 1vw;
+    padding-left: 1vw;
+    text-align: center;
+    margin: auto;
+    width: 20vw;
+    display: grid;
+} 
+
+.NUS, .TTAcad{
+  width: 30vw;
+  height: 60vh;
+  margin: 1rem auto;
+ perspective: 500px;
+  cursor: pointer;
+}
+
+.one-front,
+.one-back ,
+.two-front,
+.two-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+
+.NUS:hover .one {
+  transform: rotateY(180deg);
+}
+
+.TTAcad:hover .two {
+  transform: rotateY(180deg);
+}
+
+
+.one, .two{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+
+.one-front, .two-front {
+  background: white;
+   box-shadow: 0 15px 60px rgba(0,0,0, .5);
+   background: #E3FDF5;
+  background: linear-gradient(
+    to right,
+    #E3FDF5,#FFE6FA)
+}
+
+.one-back, .two-back{
+  background: #2A2A2A;
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 15px 60px rgba(0,0,0, .5);
+}
+
+.one p{
+   text-align: justify;
+   text-justify: inter-word;
+}
+
+.two p{
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
