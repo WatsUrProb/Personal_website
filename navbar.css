@@ -1,0 +1,90 @@
+/*
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i))
+*/
+/* testing */
+
+/* Appearance */
+
+
+.links {
+  background: #2A2A2A;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  will-change: opacity, transform;
+  transition: transform 0.3s ease-in-out;
+	border-bottom: 1px solid #0003;
+	box-shadow: 0 0 32px #0003,0 0 24px #0003, 0 0 50px #0003,
+    0 0 100px #0003, 0 0 800px #0003;
+	font-size:25px;
+}
+.links > a {
+	color: whitesmoke;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(.2s * var(--i))
+}
+.links > a:hover {
+	background: #ffffff06;
+	color: #FF2478;
+  
+}
+.links > .line {
+	background: #FF004C;
+	height: 1px;
+	pointer-events: none;
+  box-shadow:0 0 20px #FF0051,
+    0 0 24px #FF0051, 0 0 50px #FF0051,
+    0 0 100px #FF0051, 0 0 200px #FF0051
+}
+
+/* The Magic */
+#header {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links > .line {
+  height: 0.2vh;
+	opacity: 0;
+	transition: all 0.5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links > a:hover ~ .line {
+	opacity: 1;
+}
+
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+.links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+.nav--hidden {
+  transform: translateY(calc(-1.1 * var(--header-height)));
+  transition: transform 0.4s ease-in-out;
+}
