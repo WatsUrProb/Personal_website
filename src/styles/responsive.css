@@ -19,7 +19,7 @@ button { font: inherit; }
   .serviceTest, .experience, .contact { height: auto; }
   #services { margin: 0; padding: 100px 6%; }
   .project-list { gap: 24px; }
-  .project-list > div { width: 100%; }
+  .project-list > .project-card { width: 100%; }
   .experience { margin: 0; padding: 100px 6%; }
   .exp { padding-bottom: 0; }
   .experience .container { width: 100%; height: auto; padding: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); }
@@ -71,8 +71,8 @@ button { font: inherit; }
   .about-text p, .contact-text p { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
   #services { padding: 72px 5%; margin-bottom: 0; }
   .project-list { grid-template-columns: 1fr; padding-bottom: 0; }
-  .project-list > div { max-width: none; }
-  .project-list div h2 { font-size: 24px; }
+  .project-list > .project-card { max-width: none; }
+  .project-card h2 { font-size: 24px; }
   .experience .container { grid-template-columns: 1fr; }
   .card { min-height: 350px; height: 350px; }
   .card .face.face1 .content { font-size: 16px; }

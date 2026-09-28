@@ -335,7 +335,7 @@ color:#2A2A2A;
 }
 /*Section for my projects*/
 .serviceTest{
-    height: 100vh;
+    min-height: 100vh;
 }
 #services{
     margin-top: 100vh;
@@ -365,42 +365,86 @@ color:#2A2A2A;
 .project-list{
     justify-content: center;
     display: grid;
-    gap: 4px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 500px));
+    max-width: 1050px;
+    margin: 0 auto;
     padding-bottom: 50px;
 }
 
-.project-list div{
+.project-list > .project-card{
     z-index: 1;
     background-color: #2A2A2A;
-    margin: 0 auto;
-    max-width: 350px;
-    padding: 20px;
-    font-size: 13px;
-    font-weight: 13px;
-    border-right: 10px;
+    min-width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #FFE39E,
     1px 1px 40px #FDFFB3;
 }
 
-.project-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
+.project-image-wrap{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #151b25;
 }
 
-.project-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
+.project-image-wrap img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.project-list div a{
+.project-card-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.project-category{
+    color: #B3FFC4;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.project-card h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.project-card p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.project-image-note{
+    color: #c5c8cb;
+    font-size: 12px;
+    margin-top: 14px;
+}
+
+.project-card-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.project-card a{
     text-decoration: none;
     color:black;
-    font-size: 20px;
-    margin-top: 20px;
     display: inline-block;
 }
 
@@ -429,11 +473,10 @@ color:#2A2A2A;
     0 0 100px #CCE3F0, 0 0 200px #CCE3F0
 }
 
-.project-list div:hover{
+.project-list > .project-card:hover{
     transform: translateY(-10px);
     box-shadow:0 0 20px #B3FFC4,
     0 0 24px #CCE3F0, 0 0 50px #CCE3F0;
-    
 }
 /*Education and experience section*/
 .experience{
