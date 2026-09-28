@@ -1,0 +1,94 @@
+/* Layout adjustments for tablets and phones. */
+html { scroll-padding-top: 84px; }
+button { font: inherit; }
+.menu-toggle { display: none; }
+.card--revealed .face.face2,
+.card:focus-within .face.face2 { height: 76px; border-radius: 0 0 15px 15px; }
+.work--revealed .one,
+.work--revealed .two { transform: rotateY(180deg); }
+.face.face2, .one-front, .one-back, .two-front, .two-back { cursor: pointer; }
+.face.face2:focus-visible, .one-front:focus-visible, .one-back:focus-visible,
+.two-front:focus-visible, .two-back:focus-visible, .menu-toggle:focus-visible,
+.links a:focus-visible { outline: 3px solid #07f3a4; outline-offset: 3px; }
+
+@media (max-width: 1200px) {
+  .home { min-height: 100svh; height: auto; padding: 120px 6% 80px; }
+  .about { height: auto; padding: 100px 6%; margin: 0; gap: 3rem; }
+  .about-img img { margin-left: 0; width: 100%; max-width: 400px; }
+  .about-text p { padding-right: 0; }
+  .serviceTest, .experience, .contact { height: auto; }
+  #services { margin: 0; padding: 100px 6%; }
+  .project-list { gap: 24px; }
+  .project-list > div { width: 100%; }
+  .experience { margin: 0; padding: 100px 6%; }
+  .exp { padding-bottom: 0; }
+  .experience .container { width: 100%; height: auto; padding: 0; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); }
+  .card { width: min(100%, 350px); }
+  .card .face.face1 .content a { font-size: 16px; }
+  .card .face.face2 h2 { font-size: clamp(18px, 2vw, 26px); }
+  .exp h1 { margin: 60px auto 24px; white-space: normal; }
+  .Work { margin: 0; gap: 24px; justify-content: center; }
+  .Work .NUS, .Work .TTAcad { width: min(100%, 430px); height: 380px; margin: 0; padding: 0; }
+  .Work .one, .Work .two, .Work .one-front, .Work .one-back, .Work .two-front, .Work .two-back { width: 100%; height: 100%; margin: 0; }
+  .Work .one-front, .Work .one-back, .Work .two-front, .Work .two-back { padding: 24px; }
+  .contact { margin: 0; padding: 100px 6%; }
+  .contact-text h2 { font-size: clamp(44px, 6vw, 76px); }
+  .contact-list li { font-size: clamp(16px, 2vw, 22px); overflow-wrap: anywhere; }
+  .contact-form form input, .contact-form form textarea { width: 100%; }
+  .contact-form form .send { width: auto; min-width: 120px; }
+  .last-text p { margin-bottom: 0; }
+}
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 72px; }
+  #header { background: #2a2a2a; z-index: 10; }
+  .menu-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 60px; padding: 8px 6%; background: #2a2a2a; color: white; border: 0; font-size: 18px; font-weight: 700; cursor: pointer; }
+  .menu-toggle span { font-size: 25px; line-height: 1; width: 30px; }
+  .links { display: none; grid-template-columns: 1fr; position: absolute; top: 100%; left: 0; right: 0; font-size: 17px; max-height: calc(100svh - 60px); overflow-y: auto; }
+  .links--open { display: grid; }
+  .links > a { opacity: 1; animation: none; text-align: left; padding: 13px 6%; }
+  .links > .line { display: none; }
+  .nav--hidden { transform: none; }
+  .about { grid-template-columns: 1fr; justify-items: center; }
+  .about-text { max-width: 700px; }
+  .contact { grid-template-columns: 1fr; gap: 30px; }
+  .contact-text h2 { text-align: left; }
+}
+
+@media (max-width: 650px) {
+  .home { padding: 100px 5% 60px; }
+  .home-content { width: 100%; padding: 18px; border-width: 3px; }
+  .home-content h1 { font-size: clamp(38px, 11vw, 56px); }
+  .home-content h3 { font-size: clamp(19px, 5.5vw, 28px); }
+  .home-content p { font-size: 16px; line-height: 1.55; }
+  .home-science { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .home-science a { width: 48px; height: 48px; margin: 0; font-size: 28px; }
+  .btn-box { display: inline-block; margin-bottom: 0; padding: 12px 18px; }
+  .btn-box .button { font-size: 18px; }
+  .about, .experience, .contact { padding: 72px 5%; }
+  .about-text h2, .sub-title, .expHeader { font-size: clamp(36px, 10vw, 52px); padding-bottom: 30px; }
+  .about-text h4 { font-size: 22px; }
+  .about-text p, .contact-text p { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+  #services { padding: 72px 5%; margin-bottom: 0; }
+  .project-list { grid-template-columns: 1fr; padding-bottom: 0; }
+  .project-list > div { max-width: none; }
+  .project-list div h2 { font-size: 24px; }
+  .experience .container { grid-template-columns: 1fr; }
+  .card { min-height: 350px; height: 350px; }
+  .card .face.face1 .content { font-size: 16px; }
+  .exp h1 { font-size: clamp(24px, 7vw, 36px); }
+  .Work { flex-direction: column; align-items: center; }
+  .Work .NUS, .Work .TTAcad { height: 360px; }
+  .Work .one-back p, .Work .two-back p { font-size: 14px; line-height: 1.5; text-align: left; }
+  .contact-text h2 { font-size: clamp(38px, 10vw, 54px); }
+  .contact-list li { font-size: 16px; }
+  .contact-form textarea { height: 170px; }
+  .last-text p { font-size: 13px; padding: 20px 12px; }
+  .top { left: 12px; }
+  .top i { font-size: 42px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .test { opacity: 1; transform: none; }
+}
