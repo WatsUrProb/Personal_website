@@ -20,6 +20,8 @@ npm install
 npm run dev
 ```
 
-The Vite base path is configured for GitHub Pages at `/Personal_website/`.
+## GitHub Pages
 
-Before publishing, place the existing `F1040032.JPG` and `JovanCV.pdf` files in `public/assets/` as `profile.jpg` and `JovanCV.pdf` respectively.
+The site is published at <https://watsurprob.github.io/Personal_website/>. The Vite base path is configured for this repository in `vite.config.js`.
+
+Pushing to `main` runs `.github/workflows/deploy-pages.yml`, which installs dependencies, builds the site, and publishes `dist/` through GitHub Pages. The workflow can also be started manually from the Actions tab.
