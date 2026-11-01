@@ -19,7 +19,7 @@ export default function App() {
       <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
-      <div className="last-text test"><p>Developed out of boredom by Jovan 2025</p></div>
+      <div className="last-text test"><p>Developed by Jovan 2026</p></div>
       <a href="#container" className="top test">
         <i className="bx bxs-chevron-up-circle bx-tada" style={{ color: "rgba(7,243,164,0.99)" }} aria-hidden="true" />
       </a>

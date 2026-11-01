@@ -10,7 +10,7 @@ export default function AboutSection() {
         <p className="test">
           I have some basic experience in web development. I’ve worked with HTML, CSS, and a bit of JavaScript to create simple web pages and understand how websites are structured. While I’m still learning, I enjoy experimenting with layouts and interactive elements, and I’m looking forward to improving my skills and taking on more complex projects in the future.
         </p>
-        <a href={`${import.meta.env.BASE_URL}assets/JovanCV.pdf`} className="btn-box liquid" target="_blank" rel="noopener noreferrer">
+        <a href={`${import.meta.env.BASE_URL}assets/Jovan-Resume.pdf`} className="btn-box liquid" target="_blank" rel="noopener noreferrer">
           <span className="button">My Resume</span>
         </a>
       </div>

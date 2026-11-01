@@ -1,7 +1,7 @@
 import SocialLinks from "../components/SocialLinks";
 import { useTypingEffect } from "../hooks/useOriginalInteractions";
 
-const typedWords = ["NUS Student", "Learner", "Ponderer", "Hardworker"];
+const typedWords = ["NUS Student", "Learner", "Hardworker"];
 
 export default function HomeSection() {
   const typedText = useTypingEffect(typedWords);
@@ -17,7 +17,7 @@ export default function HomeSection() {
           experience familiarising with front-end development and web designing.
         </p>
         <SocialLinks />
-        <a href={`${import.meta.env.BASE_URL}assets/JovanCV.pdf`} className="btn-box liquid" target="_blank" rel="noopener noreferrer">
+        <a href={`${import.meta.env.BASE_URL}assets/Jovan-Resume.pdf`} className="btn-box liquid" target="_blank" rel="noopener noreferrer">
           More About Me
         </a>
       </div>
