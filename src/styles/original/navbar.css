@@ -31,16 +31,15 @@
 }
 .links > a:hover {
 	background: #ffffff06;
-	color: #FF2478;
+	color: #d6d6d6;
   
 }
 .links > .line {
-	background: #FF004C;
+	background: #696969;
 	height: 1px;
 	pointer-events: none;
-  box-shadow:0 0 20px #FF0051,
-    0 0 24px #FF0051, 0 0 50px #FF0051,
-    0 0 100px #FF0051, 0 0 200px #FF0051
+  box-shadow: 0 0 12px #77777780,
+    0 0 24px #77777755
 }
 
 /* The Magic */
